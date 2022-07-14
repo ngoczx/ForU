@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    0deg,
+    rgba(247, 247, 247, 1) 23.8%,
+    rgba(252, 221, 221, 1) 92%
+  );
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.answers {
+  margin-top: 20px;
+  display: flex;
+  gap: 100px;
+}
+
+.answers button {
+  box-shadow: 0 0 0.8rem black;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  padding: 20px 40px;
+  cursor: pointer;
+}
+
+.popup-content {
+  opacity: 0;
+  text-align: center;
+  margin: 50px 20px 100px;
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+  padding: 2.5rem 2rem;
+  position: absolute;
+  z-index: -99;
+  transform: scale(0.5);
+  transition: transform 0.2s ease-in, opacity 0.3s ease-in;
+}
+
+.popup-content img {
+  height: 150;
+  margin: 10px 0;
+}
+
+.popup-content.yes {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.main-content.none {
+  opacity: 0;
+}
